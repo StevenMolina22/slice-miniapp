@@ -66,7 +66,7 @@ export const fetchJSONFromIPFS = async (ipfsHash: string) => {
     // Ensure the gateway URL ends with a slash
     const baseUrl = GATEWAY_URL.endsWith("/") ? GATEWAY_URL : `${GATEWAY_URL}/`;
 
-    const res = await axios.get(`${baseUrl}${ipfsHash}`);
+    const res = await axios.get(`${baseUrl}ipfs/${ipfsHash}`);
     return res.data;
   } catch (error) {
     console.error(`Error fetching from IPFS (${ipfsHash}): `, error);
