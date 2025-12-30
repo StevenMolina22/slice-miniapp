@@ -5,7 +5,6 @@ import {
   Wallet,
   CheckCircle2,
   XCircle,
-  FileText,
   ArrowRight,
   Gavel,
   Lock,

@@ -24,7 +24,7 @@ export function useSwipeGesture({
     isDragging.current = true;
   }, []);
 
-  const onTouchMove = useCallback((e: React.TouchEvent) => {
+  const onTouchMove = useCallback((_e: React.TouchEvent) => {
     if (!isDragging.current || !startX.current || !startY.current) return;
 
     // We do NOT preventDefault here anymore to avoid "sticky" vertical scrolling.
@@ -68,7 +68,7 @@ export function useSwipeGesture({
     isDragging.current = true;
   }, []);
 
-  const onMouseMove = useCallback((e: React.MouseEvent) => {
+  const onMouseMove = useCallback((_e: React.MouseEvent) => {
     if (!isDragging.current) return;
     // Optional: Only prevent default on mouse to stop text selection while dragging
     // e.preventDefault();

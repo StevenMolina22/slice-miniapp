@@ -6,7 +6,7 @@ import { useGetDispute } from "@/hooks/useGetDispute";
 import { useExecuteRuling } from "@/hooks/useExecuteRuling";
 import { SuccessAnimation } from "@/components/SuccessAnimation";
 import { useSwipeGesture } from "@/hooks/useSwipeGesture";
-import { Loader2, ArrowLeft, Wallet, Trophy, Coins, Gavel } from "lucide-react";
+import { Loader2, Wallet, Trophy, Coins, Gavel } from "lucide-react";
 import { toast } from "sonner";
 import { PaginationDots } from "@/components/dispute-overview/PaginationDots";
 import { DisputeOverviewHeader } from "@/components/dispute-overview/DisputeOverviewHeader";

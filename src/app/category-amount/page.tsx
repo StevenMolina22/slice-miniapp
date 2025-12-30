@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { AmountSelector } from "@/components/category-amount/AmountSelector";
 import { SwipeButton } from "@/components/category-amount/SwipeButton";
-import { AlertCircle, ChevronDown, ArrowLeft, Target } from "lucide-react";
+import { AlertCircle, ChevronDown, Target } from "lucide-react";
 import { DisputeOverviewHeader } from "@/components/dispute-overview/DisputeOverviewHeader";
 
 export default function CategoryAmountPage() {
@@ -13,8 +13,6 @@ export default function CategoryAmountPage() {
   const [selectedAmount, setSelectedAmount] = useState<number>(50);
   const [category, setCategory] = useState("Select a category");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleBack = () => router.back();
 
   const handleSwipeComplete = () => {
     // Pass the selected integer amount (e.g., "50") to the assign page.

@@ -36,7 +36,7 @@ export function useVote(disputeId: string) {
         setSelectedVote(null);
       }
     }
-  }, [address, disputeId]);
+  }, [address, disputeId, sliceContract]);
 
   // Actions
   const handleVoteSelect = useCallback(

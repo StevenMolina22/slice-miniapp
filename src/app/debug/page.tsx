@@ -13,7 +13,6 @@ import {
 import { toast } from "sonner";
 import { formatUnits } from "viem";
 import { useSliceVoting } from "@/hooks/useSliceVoting";
-import { useCreateDispute } from "@/hooks/useCreateDispute";
 import { usePayDispute } from "@/hooks/usePayDispute";
 import { getVoteData } from "@/util/votingStorage";
 import { useExecuteRuling } from "@/hooks/useExecuteRuling";
@@ -41,7 +40,6 @@ export default function DebugPage() {
     isProcessing: isVoting,
     logs,
   } = useSliceVoting();
-  const { createDispute, isCreating } = useCreateDispute();
   const { payDispute, isPaying } = usePayDispute();
   const { executeRuling } = useExecuteRuling();
 
@@ -271,7 +269,7 @@ export default function DebugPage() {
       <div className="flex-1 p-5 flex flex-col gap-6 overflow-y-auto">
         <GlobalStateCard
           contractInfo={contractInfo}
-          isCreating={isCreating || isWriting}
+          isCreating={isWriting}
           onCreate={handleQuickCreate}
           myPartyDisputes={myPartyDisputes}
           myJurorDisputes={myJurorDisputes}
